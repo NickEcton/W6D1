@@ -1,0 +1,10 @@
+/* PHASE 8: Thumbs */
+li:nth-child(3n+2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.friends {
+  display: inline-grid;
+  /* flex-direction: column; */
+}
