@@ -29,12 +29,11 @@ function curriedSum(numArgs){
 }
 
 Function.prototype.curry = function(numArgs) {
-  this_dup = this;
   let args = [];
-  _curried = function(arg){
+  _curried = (arg) => {
     args.push(arg);
     if (args.length === numArgs) {
-      return this_dup.apply(this_dup, args);
+      return this.apply(this, args);
     } else {
       return _curried; 
     }
